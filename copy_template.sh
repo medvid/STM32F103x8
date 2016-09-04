@@ -17,4 +17,5 @@ rm -rf ${DEST}/{IAR,MDK}/*-{Debug,Release}
     target=$(echo ${FILE} |sed -e "s/${SRC}/${DEST}/")
     mv ${FILE} ${target}
     sed -e "s/${SRC}/${DEST}/g" -i ${target}
+    unix2dos ${target}
 done

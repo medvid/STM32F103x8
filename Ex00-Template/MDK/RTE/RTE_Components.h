@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Component Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'Ex00' 
+ * Project: 'Ex00-Template' 
  * Target:  'STM32F103x8-Debug' 
  */
 

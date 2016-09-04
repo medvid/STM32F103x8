@@ -9,6 +9,10 @@
 
   <project>
     <PathAndName>..\Ex00-Template\MDK\Ex00-Template.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\Ex01-Blinky\MDK\Ex01-Blinky.uvprojx</PathAndName>
     <NodeIsActive>1</NodeIsActive>
     <NodeIsExpanded>1</NodeIsExpanded>
   </project>

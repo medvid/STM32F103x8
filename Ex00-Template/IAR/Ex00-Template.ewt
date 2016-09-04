@@ -2108,6 +2108,15 @@
     <file>
       <name>$PROJ_DIR$\..\retarget.c</name>
     </file>
+    <file>
+      <name>$PROJ_DIR$\..\stm32f10x_conf.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\stm32f10x_it.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\stm32f10x_it.h</name>
+    </file>
   </group>
   <group>
     <name>BSP</name>
@@ -2128,15 +2137,6 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\BSP\bsp_usart.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\BSP\stm32f10x_conf.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\BSP\stm32f10x_it.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\BSP\stm32f10x_it.h</name>
     </file>
   </group>
   <group>

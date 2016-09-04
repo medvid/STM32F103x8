@@ -9,6 +9,7 @@
 #include "bsp_usart.h"
 
 void BSP_CounterInit(void);
+void BSP_Tick(void);
 
 uint32_t micros(void);
 uint32_t millis(void);

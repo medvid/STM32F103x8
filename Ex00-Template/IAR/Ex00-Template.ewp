@@ -1049,7 +1049,7 @@
         </option>
         <option>
           <name>OGChipSelectEditMenu</name>
-          <state>STM32F107xC	ST STM32F107xC</state>
+          <state>STM32F103x8	ST STM32F103x8</state>
         </option>
         <option>
           <name>GenLowLevelInterface</name>
@@ -1092,7 +1092,7 @@
         </option>
         <option>
           <name>OGUseCmsis</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>OGUseCmsisDspLib</name>
@@ -1109,7 +1109,7 @@
         </option>
         <option>
           <name>GFPUDeviceSlave</name>
-          <state>STM32F107xC	ST STM32F107xC</state>
+          <state>STM32F103x8	ST STM32F103x8</state>
         </option>
         <option>
           <name>FPU2</name>
@@ -1142,8 +1142,7 @@
         <option>
           <name>CCDefines</name>
           <state>USE_STDPERIPH_DRIVER</state>
-          <state>STM32F10X_CL</state>
-          <state>USE_STM3210C_EVAL</state>
+          <state>STM32F10X_MD</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -1273,12 +1272,10 @@
         <option>
           <name>CCIncludePath2</name>
           <state>$PROJ_DIR$\..\</state>
-          <state>$PROJ_DIR$\..\..\..\Libraries\CMSIS\CM3\CoreSupport</state>
-          <state>$PROJ_DIR$\..\..\..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x</state>
-          <state>$PROJ_DIR$\..\..\..\Libraries\STM32F10x_StdPeriph_Driver\inc</state>
-          <state>$PROJ_DIR$\..\..\..\Utilities\STM32_EVAL</state>
-          <state>$PROJ_DIR$\..\..\..\Utilities\STM32_EVAL\Common</state>
-          <state>$PROJ_DIR$\..\..\..\Utilities\STM32_EVAL\STM3210C_EVAL</state>
+          <state>$PROJ_DIR$\..\..\BSP</state>
+          <state>$PROJ_DIR$\..\..\vendor\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\CoreSupport</state>
+          <state>$PROJ_DIR$\..\..\vendor\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x</state>
+          <state>$PROJ_DIR$\..\..\vendor\STM32F10x_StdPeriph_Lib_V3.5.0\Libraries\STM32F10x_StdPeriph_Driver\inc</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1574,7 +1571,7 @@
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state></state>
+          <state>STM32F103x8.srec</state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -1693,7 +1690,7 @@
         </option>
         <option>
           <name>IlinkIcfFile</name>
-          <state>$PROJ_DIR$\stm32f10x_flash.icf</state>
+          <state>$PROJ_DIR$\..\..\IAR\stm32f10x_flash.icf</state>
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
@@ -1939,6 +1936,15 @@
     <file>
       <name>$PROJ_DIR$\..\retarget.c</name>
     </file>
+    <file>
+      <name>$PROJ_DIR$\..\stm32f10x_conf.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\stm32f10x_it.c</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\stm32f10x_it.h</name>
+    </file>
   </group>
   <group>
     <name>BSP</name>
@@ -1959,15 +1965,6 @@
     </file>
     <file>
       <name>$PROJ_DIR$\..\..\BSP\bsp_usart.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\BSP\stm32f10x_conf.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\BSP\stm32f10x_it.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\..\..\BSP\stm32f10x_it.h</name>
     </file>
   </group>
   <group>

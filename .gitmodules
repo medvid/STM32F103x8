@@ -1,3 +1,6 @@
 [submodule "vendor/STM32F10x_StdPeriph_Lib_V3.5.0"]
 	path = vendor/STM32F10x_StdPeriph_Lib_V3.5.0
 	url = https://github.com/medvid/STM32F10x_StdPeriph_Lib_V3.5.0
+[submodule "vendor/ceedling"]
+	path = vendor/ceedling
+	url = https://github.com/ThrowTheSwitch/Ceedling

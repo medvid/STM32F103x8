@@ -13,7 +13,7 @@ fi
 
 cp -rv ${SRC} ${DEST}
 rm -rf ${DEST}/{IAR,MDK}/*-{Debug,Release}
-/usr/bin/find ${DEST} -type f | while read FILE ; do
+find ${DEST} -type f | while read FILE ; do
     target=$(echo ${FILE} |sed -e "s/${SRC}/${DEST}/")
     if [[ ${FILE} != ${target} ]]; then
         mv ${FILE} ${target}

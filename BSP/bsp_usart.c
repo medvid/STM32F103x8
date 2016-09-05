@@ -62,6 +62,9 @@ void BSP_COMInit(COM_TypeDef COM, USART_InitTypeDef* USART_InitStruct)
 
 int BSP_PutChar(COM_TypeDef COM, int ch)
 {
+    while(USART_GetFlagStatus(COM_USART[COM], USART_FLAG_TXE) == RESET)
+    {}
+
     USART_SendData(COM_USART[COM], (uint8_t) ch);
 
     /* Loop until the end of transmission */

@@ -7,6 +7,9 @@
   <project>
     <path>$WS_DIR$\..\Ex01-Blinky\IAR\Ex01-Blinky.ewp</path>
   </project>
+  <project>
+    <path>$WS_DIR$\..\Ex02-Hello\IAR\Ex02-Hello.ewp</path>
+  </project>
   <batchBuild/>
 </workspace>
 

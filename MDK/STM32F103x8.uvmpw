@@ -13,6 +13,10 @@
 
   <project>
     <PathAndName>..\Ex01-Blinky\MDK\Ex01-Blinky.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\Ex02-Hello\MDK\Ex02-Hello.uvprojx</PathAndName>
     <NodeIsActive>1</NodeIsActive>
     <NodeIsExpanded>1</NodeIsExpanded>
   </project>

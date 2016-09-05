@@ -15,7 +15,9 @@ cp -rv ${SRC} ${DEST}
 rm -rf ${DEST}/{IAR,MDK}/*-{Debug,Release}
 /usr/bin/find ${DEST} -type f | while read FILE ; do
     target=$(echo ${FILE} |sed -e "s/${SRC}/${DEST}/")
-    mv ${FILE} ${target}
+    if [[ ${FILE} != ${target} ]]; then
+        mv ${FILE} ${target}
+    fi
     sed -e "s/${SRC}/${DEST}/g" -i ${target}
     unix2dos ${target}
 done

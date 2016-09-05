@@ -9,17 +9,19 @@
 
   <project>
     <PathAndName>..\Ex00-Template\MDK\Ex00-Template.uvprojx</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
-    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
     <PathAndName>..\Ex01-Blinky\MDK\Ex01-Blinky.uvprojx</PathAndName>
-    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
     <PathAndName>..\Ex02-Hello\MDK\Ex02-Hello.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\Ex03-Button\MDK\Ex03-Button.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
     <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 

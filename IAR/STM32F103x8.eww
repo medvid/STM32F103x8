@@ -10,6 +10,9 @@
   <project>
     <path>$WS_DIR$\..\Ex02-Hello\IAR\Ex02-Hello.ewp</path>
   </project>
+  <project>
+    <path>$WS_DIR$\..\Ex03-Button\IAR\Ex03-Button.ewp</path>
+  </project>
   <batchBuild/>
 </workspace>
 

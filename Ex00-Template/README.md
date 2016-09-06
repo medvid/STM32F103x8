@@ -4,8 +4,8 @@ This is a template for STM32F103x8 project.
 
 ## Setup
 
-PA9:  USART RX
-PA10: USART TX
+PA9:  USART TX
+PA10: USART RX
 PC13: LED1
 
 ## Details

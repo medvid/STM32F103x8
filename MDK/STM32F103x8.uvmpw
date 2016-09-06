@@ -21,6 +21,10 @@
 
   <project>
     <PathAndName>..\Ex03-Button\MDK\Ex03-Button.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>..\Ex04-DhryStone\MDK\Ex04-DhryStone.uvprojx</PathAndName>
     <NodeIsActive>1</NodeIsActive>
     <NodeIsExpanded>1</NodeIsExpanded>
   </project>

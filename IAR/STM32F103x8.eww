@@ -13,6 +13,9 @@
   <project>
     <path>$WS_DIR$\..\Ex03-Button\IAR\Ex03-Button.ewp</path>
   </project>
+  <project>
+    <path>$WS_DIR$\..\Ex04-DhryStone\IAR\Ex04-DhryStone.ewp</path>
+  </project>
   <batchBuild/>
 </workspace>
 

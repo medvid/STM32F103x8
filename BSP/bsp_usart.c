@@ -21,55 +21,64 @@ const uint16_t COM_RX_PIN[COMn] = {COM1_RX_PIN, COM2_RX_PIN, COM3_RX_PIN};
   *   contains the configuration information for the specified USART peripheral.
   * @retval None
   */
-void BSP_COMInit(COM_TypeDef COM, USART_InitTypeDef* USART_InitStruct)
+void BSP_COMInit(COM_TypeDef COMx, USART_InitTypeDef* USART_InitStruct)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
 	
-    assert_param(COM < COMn);
+    assert_param(COMx < COMn);
 
     /* Enable GPIO clock */
-    RCC_APB2PeriphClockCmd(COM_TX_PORT_CLK[COM] | COM_RX_PORT_CLK[COM], ENABLE);
+    RCC_APB2PeriphClockCmd(COM_TX_PORT_CLK[COMx] | COM_RX_PORT_CLK[COMx] | RCC_APB2Periph_AFIO, ENABLE);
 
     /* Enable USART clock */
-    switch (COM)
+    switch (COMx)
     {
     case COM1:
-        RCC_APB2PeriphClockCmd(COM_USART_CLK[COM], ENABLE);
+        RCC_APB2PeriphClockCmd(COM_USART_CLK[COMx], ENABLE);
         break;
     case COM2:
     case COM3:
-        RCC_APB1PeriphClockCmd(COM_USART_CLK[COM], ENABLE);
+        RCC_APB1PeriphClockCmd(COM_USART_CLK[COMx], ENABLE);
         break;
     }
 
     /* Configure USART Tx as alternate function push-pull */
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-    GPIO_InitStructure.GPIO_Pin = COM_TX_PIN[COM];
+    GPIO_InitStructure.GPIO_Pin = COM_TX_PIN[COMx];
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(COM_TX_PORT[COM], &GPIO_InitStructure);
+    GPIO_Init(COM_TX_PORT[COMx], &GPIO_InitStructure);
 
     /* Configure USART Rx as input floating */
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
-    GPIO_InitStructure.GPIO_Pin = COM_RX_PIN[COM];
-    GPIO_Init(COM_RX_PORT[COM], &GPIO_InitStructure);
+    GPIO_InitStructure.GPIO_Pin = COM_RX_PIN[COMx];
+    GPIO_Init(COM_RX_PORT[COMx], &GPIO_InitStructure);
 
     /* USART configuration */
-    USART_Init(COM_USART[COM], USART_InitStruct);
+    USART_Init(COM_USART[COMx], USART_InitStruct);
     
     /* Enable USART */
-    USART_Cmd(COM_USART[COM], ENABLE);
+    USART_Cmd(COM_USART[COMx], ENABLE);
 }
 
-int BSP_PutChar(COM_TypeDef COM, int ch)
+int BSP_PutChar(COM_TypeDef COMx, int ch)
 {
-    while(USART_GetFlagStatus(COM_USART[COM], USART_FLAG_TXE) == RESET)
+    while(USART_GetFlagStatus(COM_USART[COMx], USART_FLAG_TXE) == RESET)
     {}
 
-    USART_SendData(COM_USART[COM], (uint8_t) ch);
-
-    /* Loop until the end of transmission */
-    while (USART_GetFlagStatus(COM_USART[COM], USART_FLAG_TC) == RESET)
-    {}
+    USART_SendData(COM_USART[COMx], (uint8_t) ch);
 
     return ch;
+}
+
+int BSP_GetChar(COM_TypeDef COMx)
+{
+    while(USART_GetFlagStatus(COM_USART[COMx], USART_SR_RXNE) == RESET)
+    {}
+
+    return USART_ReceiveData(COM_USART[COMx]);
+}
+
+FlagStatus BSP_CheckChar(COM_TypeDef COMx)
+{
+    return USART_GetFlagStatus(COM_USART[COMx], USART_SR_RXNE);
 }

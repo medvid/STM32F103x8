@@ -20,10 +20,10 @@ typedef enum
 #define LED1_GPIO_CLK                    RCC_APB2Periph_GPIOC
 
 
-void BSP_LEDInit(Led_TypeDef Led);
-void BSP_LEDOn(Led_TypeDef Led);
-void BSP_LEDOff(Led_TypeDef Led);
-void BSP_LEDToggle(Led_TypeDef Led);
+void BSP_LEDInit(Led_TypeDef LEDx);
+void BSP_LEDOn(Led_TypeDef LEDx);
+void BSP_LEDOff(Led_TypeDef LEDx);
+void BSP_LEDToggle(Led_TypeDef LEDx);
 
 #ifdef __cplusplus
 }

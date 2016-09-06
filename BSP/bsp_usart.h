@@ -49,8 +49,10 @@ typedef enum
 #define COM3_IRQn                        USART3_IRQn
 
 
-void BSP_COMInit(COM_TypeDef COM, USART_InitTypeDef* USART_InitStruct);
-int BSP_PutChar(COM_TypeDef COM, int ch);
+void BSP_COMInit(COM_TypeDef COMx, USART_InitTypeDef* USART_InitStruct);
+int BSP_PutChar(COM_TypeDef COMx, int ch);
+int BSP_GetChar(COM_TypeDef COMx);
+FlagStatus BSP_CheckChar(COM_TypeDef COMx);
 
 #ifdef __cplusplus
 }

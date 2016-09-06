@@ -19,6 +19,7 @@
 *.l2p
 *.iex
 .#*
+*.TMP
 *.uvgui.*
 *.uvguix.*
 *.uvopt

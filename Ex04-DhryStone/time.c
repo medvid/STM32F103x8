@@ -30,7 +30,7 @@ void TIM_Init(void)
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1, ENABLE);
     
     /* set prescaler = 10KHz, auto-reload = 10 ms  */
-    TIM_InitStructure.TIM_Prescaler = 7200 - 1;
+    TIM_InitStructure.TIM_Prescaler = SystemCoreClock / 10000 - 1;
     TIM_InitStructure.TIM_CounterMode = TIM_CounterMode_Up;
     TIM_InitStructure.TIM_Period = 100 - 1;
     TIM_InitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
